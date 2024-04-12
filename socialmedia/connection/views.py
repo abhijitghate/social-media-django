@@ -1,16 +1,13 @@
 from traceback import print_tb
-from django.db.models import Q
 
-from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
+from django.db.models import Q
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
-
-
-from user.models import User
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from rest_framework.throttling import UserRateThrottle
-
+from rest_framework.views import APIView
+from user.models import User
 
 from .models import FriendRequest
 from .serializers import FriendRequestSerializer

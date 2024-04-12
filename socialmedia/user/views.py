@@ -1,14 +1,14 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+from django.db.models import Q
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.decorators import api_view
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from rest_framework.pagination import PageNumberPagination
 from .models import User
 from .serializers import CustomUserSerializer, UserRegisterSerializer
-from django_filters.rest_framework import DjangoFilterBackend
-from django.db.models import Q
 
 
 class CustomUserView(APIView):
