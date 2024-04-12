@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web:
-    image: socialmedia
+    image: abhijitghate/socialmedia:latest
     ports:
       - 8000:8000
